@@ -11,4 +11,16 @@ It was extracted by cloning the full Boost into vg at `deps/boost` and then runn
 mkdir ./subset 
 ./dist/bin/bcp --scan --boost=. ../vowpal_wabbit/vowpalwabbit/*.cc ../vowpal_wabbit/vowpalwabbit/*.h ./subset
 ./dist/bin/bcp config build predef ./subset
+
+cd ./subset
+git rm --cached tools/build/
+git rm --cached libs/predef/
+git rm --cached libs/config/
+git rm .gitmodules
+rm -Rf tools/build/.git
+rm -Rf libs/predef/.git
+rm -Rf libs/config/.git
+git add tools/build
+git add libs/predef
+git add libs/config        
 ```

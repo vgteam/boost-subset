@@ -10,5 +10,5 @@ It was extracted by cloning the full Boost into vg at `deps/boost` and then runn
 
 mkdir ./subset 
 ./dist/bin/bcp --scan --boost=. ../vowpal_wabbit/vowpalwabbit/*.cc ../vowpal_wabbit/vowpalwabbit/*.h ./subset
-./dist/bin/bcp config build ./subset
+./dist/bin/bcp config build predef ./subset
 ```
